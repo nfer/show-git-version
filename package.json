@@ -2,27 +2,29 @@
   "name": "show-git-version",
   "version": "0.0.6",
   "description": "show git version",
+  "keywords": [
+    "git",
+    "git-version"
+  ],
+  "homepage": "https://github.com/nfer/show-git-version#readme",
+  "bugs": {
+    "url": "https://github.com/nfer/show-git-version/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nfer/show-git-version.git"
+  },
+  "license": "MIT",
+  "author": "Nfer Zhuang <nferzhuang@gmail.com>",
   "main": "dist/index.js",
+  "types": "./types/index.d.ts",
   "scripts": {
     "build": "babel src --out-dir dist --extensions \".ts,.tsx\"",
     "generate": "tsc --lib es2016,es2017,dom --module amd --declaration src/index.ts --outDir types && rm types/index.js",
     "prepublishOnly": "npm run build && npm run generate",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/nfer/show-git-version.git"
-  },
-  "keywords": [
-    "git",
-    "git-version"
-  ],
-  "author": "Nfer Zhuang <nferzhuang@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/nfer/show-git-version/issues"
-  },
-  "homepage": "https://github.com/nfer/show-git-version#readme",
+  "dependencies": {},
   "devDependencies": {
     "@babel/cli": "^7.10.1",
     "@babel/core": "^7.10.2",
@@ -35,7 +37,5 @@
     "typescript": "^3.9.5",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11"
-  },
-  "types": "./types/index.d.ts",
-  "dependencies": {}
+  }
 }
